@@ -16,7 +16,7 @@ mongoose
 
 app.get('/', (req, res) => {
     // 해당 포트 localhost에 Hello World! 를 표시한다.
-  res.send('Hello World!') 
+  res.send('Happy Hacking!!') 
 })
 
 app.post('/register', (req, res)=>{
