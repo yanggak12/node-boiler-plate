@@ -66,12 +66,24 @@ userScheme.methods.generateToken = function(callback) {
     var user = this;
     // jwt token 생성
     console.log(user);
-    var token = jwt.sign(user._id.toHexString(), 'secretToken')
+    var token = jwt.sign(user._id.toHexString(), 'secretToken') // 시크릿 키 더한 후 암호화
     user.token = token;
     user.save(function(err,user){
         if(err) return callback(err);
         callback(null,user);
     })
+}
+
+userScheme.methods.findByToken = function(token, callback){
+    var user = this;
+    // jwt decode
+    jwt.verify(token,'secretToken',function(err,decoded){
+        // 유저 아이디를 이용해서 유저를 찾은 다음에 클라이언트에서 가져온 토큰과 DB에 보관된 토큰이 일치하는지 확인한다.
+        user.findOne({"_id":decoded, "token":token},function(err,user){
+            if(err) return callback(err);
+            callback(null,user);
+        })
+    });
 }
 
 const User = mongoose.model('User',userScheme);
