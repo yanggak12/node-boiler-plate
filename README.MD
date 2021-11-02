@@ -31,5 +31,5 @@
 ## 로그아웃
 - 로그아웃을 하면 인증이 되지 않아야함.
 - DB에 저장된 토큰값을 제거한다.
-- <img width="500" alt="스크린샷 2021-11-03 오전 2 08 02" src="https://user-images.githubusercontent.com/46489446/139912422-cd56939e-e9aa-4fac-ab22-871c9895df51.png">
+<img width="500" alt="스크린샷 2021-11-03 오전 2 08 02" src="https://user-images.githubusercontent.com/46489446/139912422-cd56939e-e9aa-4fac-ab22-871c9895df51.png">
 
