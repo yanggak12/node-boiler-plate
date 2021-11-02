@@ -73,7 +73,7 @@ userScheme.methods.generateToken = function (callback) {
   });
 };
 
-userScheme.methods.findByToken = function (token, callback) {
+userScheme.statics.findByToken = function (token, callback) {
   var user = this;
   // jwt decode
   jwt.verify(token, "secretToken", function (err, decoded) {
