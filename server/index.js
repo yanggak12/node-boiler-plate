@@ -83,6 +83,10 @@ app.get("/api/user/logout", auth, (req, res) => {
   });
 });
 
+app.get("/api/hello", (req, res) => {
+  res.send("response OK Hello World !! ");
+});
+
 app.listen(port, () => {
   // 5000 포트에 잘 작동하면 콘솔 메시지.
   console.log(`Example app listening at http://localhost:${port}`);
