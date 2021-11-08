@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const port = 5000;
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const { User } = require("./models/User");
@@ -86,6 +85,8 @@ app.get("/api/user/logout", auth, (req, res) => {
 app.get("/api/hello", (req, res) => {
   res.send("response OK Hello World !! ");
 });
+
+const port = 5000;
 
 app.listen(port, () => {
   // 5000 포트에 잘 작동하면 콘솔 메시지.
