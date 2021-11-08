@@ -1,6 +1,6 @@
 # Boiler Plate
 
-## Node
+# Node
 
 ```
     - express
@@ -43,13 +43,39 @@
 
 ---
 
-## React
+# React
 
 ```
     - create-react-app
+    - react-router-dom
+    - axios
+    - http-proxy-middleware
 ```
 
-creact-react-app으로 Babel, Webpack 등 을 설정해줌
+## creact-react-app
 
 - Babel : 자바스크립트 문법이 호환되지 않아도 브라우저에 맞게 변환시켜준다.
 - Webpack : 복잡한 여러 확장자를 가진 여러 모듈들을 하나로 모아 번들링한다. (src 디렉토리 내부에만)
+
+## react-router-dom
+
+- 여러 페이지를 연결시킨다.
+- SPA
+
+## axios
+
+- 백엔드 서버와의 통신을 위한 라이브러리
+- fetch보다 많은 기능 제공(비교적 무거울 수 있다.)
+
+## proxy
+
+- 아이피를 Proxy 서버에서 임의로 바꿀수 있어 접근하는 사람의 IP를 알 수 없다.
+- 보내는 데이터도 임의로 바꿀 수 있다.
+- 방화벽 기능, 웹 필터 기능, 캐시 데이터 기능, 공유 데이터 제공 기능
+
+- 사용 사례
+
+1. 인터넷 사용 제어
+2. 캐시를 이용하여 end지점까지 도달하지 않아도 되므로 빠른 인터넷 제공
+3. 더 나은 보안
+4. 이용 제한된 사이트 접근 가능
