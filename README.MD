@@ -50,6 +50,10 @@
     - react-router-dom
     - axios
     - http-proxy-middleware
+    - redux
+    - react-redux
+    - redux-promise
+    - redux-thunk
 ```
 
 ## creact-react-app
@@ -79,3 +83,13 @@
 2. 캐시를 이용하여 end지점까지 도달하지 않아도 되므로 빠른 인터넷 제공
 3. 더 나은 보안
 4. 이용 제한된 사이트 접근 가능
+
+## redux
+
+- 중앙상태관리 라이브러리
+- 부모에서 자식으로 state를 전달하는 방식이 복잡해질 경우 중앙상태관리를 통해 간소화 할 수 있다.
+- redux devtool을 통해 state 변경 과정을 추적할 수 있다.
+- dispatch를 통해 action 함수를 reducer에 전달하고 reducer는 store에 저장된 state를 변경하고 변경값을 subscribe를 통해 react에 적용된다.
+
+- action에는 type과 payload 값을 가진다.
+- reducer는 이전 state와 action을 통해 다음 state를 리턴한다.
