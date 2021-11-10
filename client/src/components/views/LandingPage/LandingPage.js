@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
-import Auth from "../../../hoc/auth";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -21,21 +20,19 @@ function LandingPage() {
     });
   };
   return (
-    <Auth>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-          height: "100vh",
-          flexDirection: "column",
-        }}
-      >
-        시작 페이지
-        <button onClick={onClickHandler}>Log Out</button>
-      </div>
-    </Auth>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: "100vh",
+        flexDirection: "column",
+      }}
+    >
+      시작 페이지
+      <button onClick={onClickHandler}>Log Out</button>
+    </div>
   );
 }
 
