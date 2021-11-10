@@ -13,7 +13,7 @@ function LandingPage() {
   const onClickHandler = () => {
     axios.get("/api/user/logout").then((response) => {
       if (response.data.success) {
-        navigate(-1);
+        navigate("/login");
       } else {
         alert("Fail to log out.");
       }
